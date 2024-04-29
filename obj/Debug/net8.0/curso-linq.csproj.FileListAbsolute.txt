@@ -1,0 +1,14 @@
+D:\Learning .Net\curso-linq\bin\Debug\net8.0\curso-linq.exe
+D:\Learning .Net\curso-linq\bin\Debug\net8.0\curso-linq.deps.json
+D:\Learning .Net\curso-linq\bin\Debug\net8.0\curso-linq.runtimeconfig.json
+D:\Learning .Net\curso-linq\bin\Debug\net8.0\curso-linq.dll
+D:\Learning .Net\curso-linq\bin\Debug\net8.0\curso-linq.pdb
+D:\Learning .Net\curso-linq\obj\Debug\net8.0\curso-linq.GeneratedMSBuildEditorConfig.editorconfig
+D:\Learning .Net\curso-linq\obj\Debug\net8.0\curso-linq.AssemblyInfoInputs.cache
+D:\Learning .Net\curso-linq\obj\Debug\net8.0\curso-linq.AssemblyInfo.cs
+D:\Learning .Net\curso-linq\obj\Debug\net8.0\curso-linq.csproj.CoreCompileInputs.cache
+D:\Learning .Net\curso-linq\obj\Debug\net8.0\curso-linq.dll
+D:\Learning .Net\curso-linq\obj\Debug\net8.0\refint\curso-linq.dll
+D:\Learning .Net\curso-linq\obj\Debug\net8.0\curso-linq.pdb
+D:\Learning .Net\curso-linq\obj\Debug\net8.0\curso-linq.genruntimeconfig.cache
+D:\Learning .Net\curso-linq\obj\Debug\net8.0\ref\curso-linq.dll
