@@ -57,7 +57,11 @@ LinqQueries queries = new LinqQueries();
 // Console.WriteLine($"Promedio de caracteres titulo: {queries.PromedioCaracteresTitulo()}");
 
 //Libros publicadoos a partir del 2000 agrupados por anio
-PrintGroup(queries.LibrosDespues2000AgrupadosPorAnio());
+// PrintGroup(queries.LibrosDespues2000AgrupadosPorAnio());
+
+//Diccionario de libros por letra
+var diccionarioLookup = queries.DiccionarioLibrosPorLetra();
+printDictionary(diccionarioLookup, 'S');
 
 void PrintValues(IEnumerable<Book> ListBooks)
 {
@@ -78,6 +82,23 @@ void PrintGroup(IEnumerable<IGrouping<int, Book>> ListadeLibros)
         foreach (var item in grupo)
         {
             Console.WriteLine("{0,-60} {1, 15} {2, 15}", item.Title, item.PageCount, item.PublishedDate.Date.ToShortDateString());
+        }
+    }
+}
+
+void printDictionary(ILookup<char, Book> listBooks, char letter)
+{
+    char letterUpper = Char.ToUpper(letter);
+    if (listBooks[letterUpper].Count() == 0)
+    {
+        Console.WriteLine($"No hay libros que inicien con la letra '{letterUpper}'");
+    }
+    else
+    {
+        Console.WriteLine("{0, -60} {1, 15} {2, 15}\n", "Título", "Nro. Páginas", "Fecha de Publicación");
+        foreach (var book in listBooks[letterUpper])
+        {
+            Console.WriteLine("{0, -60} {1, 15} {2, 15}", book.Title, book.PageCount, book.PublishedDate.ToShortDateString());
         }
     }
 }
