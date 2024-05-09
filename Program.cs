@@ -54,7 +54,10 @@ LinqQueries queries = new LinqQueries();
 // Console.WriteLine($"Titulos de libros con fecha de publicacion mayor a 2015: {queries.TitulosFechaPublicMayor2015()}");
 
 //Promedio de caracteres del titulo de los libros
-Console.WriteLine($"Promedio de caracteres titulo: {queries.PromedioCaracteresTitulo()}");
+// Console.WriteLine($"Promedio de caracteres titulo: {queries.PromedioCaracteresTitulo()}");
+
+//Libros publicadoos a partir del 2000 agrupados por anio
+PrintGroup(queries.LibrosDespues2000AgrupadosPorAnio());
 
 void PrintValues(IEnumerable<Book> ListBooks)
 {
@@ -62,5 +65,19 @@ void PrintValues(IEnumerable<Book> ListBooks)
     foreach (var book in ListBooks)
     {
         Console.WriteLine("{0,-60} {1,15} {2,15}", book.Title, book.PageCount, book.PublishedDate.ToShortDateString());
+    }
+}
+
+void PrintGroup(IEnumerable<IGrouping<int, Book>> ListadeLibros)
+{
+    foreach (var grupo in ListadeLibros)
+    {
+        Console.WriteLine("");
+        Console.WriteLine($"Grupo: {grupo.Key}");
+        Console.WriteLine("{0,-60} {1, 15} {2, 15}\n", "Titulo", "N. Paginas", "Fecha publicacion");
+        foreach (var item in grupo)
+        {
+            Console.WriteLine("{0,-60} {1, 15} {2, 15}", item.Title, item.PageCount, item.PublishedDate.Date.ToShortDateString());
+        }
     }
 }
