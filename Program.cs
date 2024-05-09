@@ -51,7 +51,10 @@ LinqQueries queries = new LinqQueries();
 // Console.WriteLine($"Suma total de paginas: {queries.SumaPag0A500()} paginas");
 
 //Titulos de libros con fecha de publicacion mayor a 2015
-Console.WriteLine($"Titulos de libros con fecha de publicacion mayor a 2015: {queries.TitulosFechaPublicMayor2015()}");
+// Console.WriteLine($"Titulos de libros con fecha de publicacion mayor a 2015: {queries.TitulosFechaPublicMayor2015()}");
+
+//Promedio de caracteres del titulo de los libros
+Console.WriteLine($"Promedio de caracteres titulo: {queries.PromedioCaracteresTitulo()}");
 
 void PrintValues(IEnumerable<Book> ListBooks)
 {
