@@ -52,8 +52,23 @@ public class LinqQueries
         return librosCollections.Where(p => p.Categories.Contains("Java")).OrderBy(p => p.Title);
     }
 
-        public IEnumerable<Book> LibrosMasPag450OrdenarNumPagDesc()
+    public IEnumerable<Book> LibrosMasPag450OrdenarNumPagDesc()
     {
         return librosCollections.Where(p => p.PageCount > 450).OrderByDescending(p => p.PageCount);
     }
+
+    public IEnumerable<Book> LibrosJavaPublciacionRecientemente()
+    {
+        return librosCollections
+        .Where(p => p.Categories.Contains("Java"))
+        .OrderByDescending(p => p.PublishedDate)
+        .Take(3);
+    }
+    public IEnumerable<Book> TecerCuartoLibroMas400Pag()
+    {
+        return librosCollections.Where(p => p.PageCount > 400)
+        .Take(4)
+        .Skip(2);
+    }
+
 }
