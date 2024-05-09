@@ -60,8 +60,11 @@ LinqQueries queries = new LinqQueries();
 // PrintGroup(queries.LibrosDespues2000AgrupadosPorAnio());
 
 //Diccionario de libros por letra
-var diccionarioLookup = queries.DiccionarioLibrosPorLetra();
-printDictionary(diccionarioLookup, 'S');
+// var diccionarioLookup = queries.DiccionarioLibrosPorLetra();
+// printDictionary(diccionarioLookup, 'S');
+
+//Libros filtrados con la clausula JOIN
+PrintValues(queries.LibrosDespues2005Mas500Pag());
 
 void PrintValues(IEnumerable<Book> ListBooks)
 {
