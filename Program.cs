@@ -1,6 +1,13 @@
 ﻿// See https://aka.ms/new-console-template for more information
 LinqQueries queries = new LinqQueries();
-PrintValues(queries.getAll());
+//toda la coleccion
+// PrintValues(queries.getAll());
+
+//libros despues del 200
+// PrintValues(queries.LibrosDespues2000());
+
+//libros que tienen mas 250 pag y tienen en el titulo la palabra "In Action"
+PrintValues(queries.LibrosMas250PagConPalabrasInAction());
 
 
 void PrintValues(IEnumerable<Book> ListBooks)
