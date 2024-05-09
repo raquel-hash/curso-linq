@@ -7,8 +7,13 @@ LinqQueries queries = new LinqQueries();
 // PrintValues(queries.LibrosDespues2000());
 
 //libros que tienen mas 250 pag y tienen en el titulo la palabra "In Action"
-PrintValues(queries.LibrosMas250PagConPalabrasInAction());
+// PrintValues(queries.LibrosMas250PagConPalabrasInAction());
 
+//Todos los libros tienen status ?
+// Console.WriteLine($"Todos los libros tienen status ?: {queries.TodosLibrosTienenStatus()}");
+
+//Algun libro publicado en 2005?
+Console.WriteLine($"Algun libro publicado en 2005?: {queries.AlgunLibroPublicado2005()}");
 
 void PrintValues(IEnumerable<Book> ListBooks)
 {
