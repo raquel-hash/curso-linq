@@ -44,8 +44,14 @@ LinqQueries queries = new LinqQueries();
 // Console.WriteLine($"{libroMenorPag.Title} - {libroMenorPag.PageCount}");
 
 //Libro con fecha de publicacion reciente
-var libroPublicacionReciente = queries.LibroFechaPublicacionReciente();
-Console.WriteLine($"{libroPublicacionReciente.Title} - {libroPublicacionReciente.PublishedDate}");
+// var libroPublicacionReciente = queries.LibroFechaPublicacionReciente();
+// Console.WriteLine($"{libroPublicacionReciente.Title} - {libroPublicacionReciente.PublishedDate}");
+
+//Suma de paginas de libros entre 0 a 500
+// Console.WriteLine($"Suma total de paginas: {queries.SumaPag0A500()} paginas");
+
+//Titulos de libros con fecha de publicacion mayor a 2015
+Console.WriteLine($"Titulos de libros con fecha de publicacion mayor a 2015: {queries.TitulosFechaPublicMayor2015()}");
 
 void PrintValues(IEnumerable<Book> ListBooks)
 {
