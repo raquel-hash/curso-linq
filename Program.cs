@@ -26,7 +26,9 @@ LinqQueries queries = new LinqQueries();
 // PrintValues(queries.LibrosJavaPublciacionRecientemente());
 
 //Tercer y cuarto libro con mas de 400 pag
-PrintValues(queries.TecerCuartoLibroMas400Pag());
+// PrintValues(queries.TecerCuartoLibroMas400Pag());
+//Tres primeros libros filtrados con select
+PrintValues(queries.TresPrimerosLibrosColeccion());
 
 void PrintValues(IEnumerable<Book> ListBooks)
 {
