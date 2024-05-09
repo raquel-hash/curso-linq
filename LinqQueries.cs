@@ -81,4 +81,9 @@ public class LinqQueries
         });
     }
 
+    public long NumeroLibrosPag200A500Pag()
+    {
+        // return librosCollections.Where(p => p.PageCount >= 200 && p.PageCount <= 500).LongCount();//Mala Practica
+        return librosCollections.Count(p => p.PageCount >= 200 && p.PageCount <= 500);
+    }
 }

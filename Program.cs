@@ -28,7 +28,10 @@ LinqQueries queries = new LinqQueries();
 //Tercer y cuarto libro con mas de 400 pag
 // PrintValues(queries.TecerCuartoLibroMas400Pag());
 //Tres primeros libros filtrados con select
-PrintValues(queries.TresPrimerosLibrosColeccion());
+// PrintValues(queries.TresPrimerosLibrosColeccion());
+
+//Numero de libros que tienen entre 200 a 500 paginas
+Console.WriteLine($"Cantidad de libros que tienen entre 200 a 500 paginas: {queries.NumeroLibrosPag200A500Pag()}");
 
 void PrintValues(IEnumerable<Book> ListBooks)
 {
