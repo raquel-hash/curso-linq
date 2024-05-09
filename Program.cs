@@ -31,7 +31,13 @@ LinqQueries queries = new LinqQueries();
 // PrintValues(queries.TresPrimerosLibrosColeccion());
 
 //Numero de libros que tienen entre 200 a 500 paginas
-Console.WriteLine($"Cantidad de libros que tienen entre 200 a 500 paginas: {queries.NumeroLibrosPag200A500Pag()}");
+// Console.WriteLine($"Cantidad de libros que tienen entre 200 a 500 paginas: {queries.NumeroLibrosPag200A500Pag()}");
+
+//Fecha de publicacion minimo
+// Console.WriteLine($"Fecha de publicacion minimo: {queries.FechaPublicacionMenor()}");
+
+//Libro con mas paginas
+Console.WriteLine($"Libro con mas paginas: {queries.LibroMasPag()} paginas");
 
 void PrintValues(IEnumerable<Book> ListBooks)
 {

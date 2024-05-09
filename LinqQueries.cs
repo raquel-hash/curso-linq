@@ -86,4 +86,13 @@ public class LinqQueries
         // return librosCollections.Where(p => p.PageCount >= 200 && p.PageCount <= 500).LongCount();//Mala Practica
         return librosCollections.Count(p => p.PageCount >= 200 && p.PageCount <= 500);
     }
+
+    public DateTime FechaPublicacionMenor()
+    {
+        return librosCollections.Min(p => p.PublishedDate);
+    }
+
+    public int LibroMasPag() {
+        return librosCollections.Max(p=> p.PageCount);
+    }
 }
