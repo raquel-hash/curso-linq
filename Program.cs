@@ -37,7 +37,15 @@ LinqQueries queries = new LinqQueries();
 // Console.WriteLine($"Fecha de publicacion minimo: {queries.FechaPublicacionMenor()}");
 
 //Libro con mas paginas
-Console.WriteLine($"Libro con mas paginas: {queries.LibroMasPag()} paginas");
+// Console.WriteLine($"Libro con mas paginas: {queries.LibroMasPag()} paginas");
+
+//Libro con menor numero de paginas
+// var libroMenorPag = queries.LibroMenorNumPag();
+// Console.WriteLine($"{libroMenorPag.Title} - {libroMenorPag.PageCount}");
+
+//Libro con fecha de publicacion reciente
+var libroPublicacionReciente = queries.LibroFechaPublicacionReciente();
+Console.WriteLine($"{libroPublicacionReciente.Title} - {libroPublicacionReciente.PublishedDate}");
 
 void PrintValues(IEnumerable<Book> ListBooks)
 {
